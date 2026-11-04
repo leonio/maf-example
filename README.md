@@ -99,6 +99,19 @@ docker run --rm -p 8000:8000 -v maf-example-runs:/data maf-example
 
 Open http://localhost:8000.
 
+### In a dev container (VS Code or GitHub Codespaces)
+
+Open the folder in VS Code and choose **Reopen in Container**, or on GitHub choose **Code → Codespaces → Create
+codespace**. The container has Python 3.12 with uv and Node 24 with pnpm; on first start it installs the dependencies
+and builds the UI. Then:
+
+```bash
+uv run design-pipeline        # port 8000 opens in your browser
+```
+
+For hot reload on the UI, run `cd web && pnpm dev --host` alongside it (port 5173). The container's Python environment
+and `web/node_modules` are kept apart from any you made on your own machine, so both can coexist in the same folder.
+
 ### From source
 
 Needs Python 3.12+ with [uv](https://docs.astral.sh/uv/), and Node.js 22+ with [pnpm](https://pnpm.io/)
