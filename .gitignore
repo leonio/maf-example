@@ -6,3 +6,6 @@ __pycache__/
 .ruff_cache/
 *.egg-info/
 .env
+
+# pnpm store, if a container ever puts it in the workspace.
+.pnpm-store/

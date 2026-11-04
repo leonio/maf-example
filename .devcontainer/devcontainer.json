@@ -13,6 +13,9 @@
 		"UV_PROJECT_ENVIRONMENT": "/home/vscode/.venv",
 		"UV_LINK_MODE": "copy",
 		"COREPACK_ENABLE_DOWNLOAD_PROMPT": "0",
+		// pnpm keeps its package store on the same disk as node_modules, which (being a volume, see below) would
+		// put it in the workspace as .pnpm-store/. Keep it in the home folder instead.
+		"pnpm_config_store_dir": "/home/vscode/.local/share/pnpm/store",
 		// Reachable through the forwarded port, not only from inside the container.
 		"PIPELINE_HOST": "0.0.0.0"
 	},
