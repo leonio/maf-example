@@ -1,0 +1,8 @@
+# Run folders: generated apps, specs, reviews, merge-request notes, timelines.
+output/
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.env
